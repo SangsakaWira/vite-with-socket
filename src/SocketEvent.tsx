@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { io } from "socket.io-client";
 
 const SocketEventListener = () => {
-  const notify = (message: string) => toast(message || "I am clicked!");
+  const notify = (message?: string) => toast(message || "I am clicked!");
 
   useEffect(() => {
     const socket = io("https://realtime.gawegawe.id"); // Replace with your Socket.io server URL
